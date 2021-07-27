@@ -9,7 +9,7 @@
 `Cargo.toml`:
 ```toml
 [dependencies]
-bbangcat_encryption = "0.1.0"
+bbangcat_encryption = "0.1.1"
 ```
 
 `main.rs`:
