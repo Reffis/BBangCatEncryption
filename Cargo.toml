@@ -2,7 +2,8 @@
 name = "bbangcat_encryption"
 version = "0.1.0"
 edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+license = "MIT"
+repository = "https://github.com/fn79/BBangCatEncryption"
+description = "BBang Cat Encryption"
 
 [dependencies]

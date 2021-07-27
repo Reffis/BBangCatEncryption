@@ -1,9 +1,29 @@
 mod converter;
 
-mod bce {
+/// # BBang Cat Encryption - 빵켓 암호화
+///
+/// ## **예제:**
+/// ```
+/// use bbangcat_encryption::bce;
+///
+/// println!("{}", bce::to_bce::new("Hello, World!")); // 뿢빽콋콋컜랰 쾛컜뿅콋뺗렾
+/// println!("{}", bce::to_str::new("뿢빽콋콋컜랰 쾛컜뿅콋뺗렾")); // Hello, World!
+/// ```
+///
+pub mod bce {
+    /// # **문자열 -> BCE**
     pub mod to_bce {
         use crate::converter::get_key_to_bce;
 
+        /// # **문자열을 BCE 텍스트로 변환합니다.**
+        ///
+        /// ```
+        /// use bbangcat_encryption::bce;
+        ///
+        /// println!("{}", bce::to_bce::new("Hello, World!")); // 뿢빽콋콋컜랰 쾛컜뿅콋뺗렾
+        /// ```
+        ///
+        /// **new ( text: &str ) -> String**
         pub fn new(text: &str) -> String {
             let mut result = String::new();
             for i in text.split("").collect::<Vec<&str>>() {
@@ -16,9 +36,19 @@ mod bce {
         }
     }
 
+    /// # **BCE -> 문자열**
     pub mod to_str {
         use crate::converter::get_key_to_str;
 
+        /// # **BCE 문자열을 문자열로 변환합니다.**
+        ///
+        /// ```
+        /// use bbangcat_encryption::bce;
+        ///
+        /// println!("{}", bce::to_str::new("뿢빽콋콋컜랰 쾛컜뿅콋뺗렾")); // Hello, World!
+        /// ```
+        ///
+        /// **new ( text: &str ) -> String**
         pub fn new(text: &str) -> String {
             let mut result = String::new();
             for i in text.split("").collect::<Vec<&str>>() {
