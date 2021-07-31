@@ -22,6 +22,4 @@ fn main() {
     println!("{}", bce::to_bce::new("Hello, World!")); // 뿢빽콋콋컜랰 쾛컜뿅콋뺗렾
     println!("{}", bce::to_str::new("뿢빽콋콋컜랰 쾛컜뿅콋뺗렾")); // Hello, World!
 }
-
 ```
-
